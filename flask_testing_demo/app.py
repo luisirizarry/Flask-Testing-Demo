@@ -7,6 +7,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "abc123"
 app.debug = True
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 toolbar = DebugToolbarExtension(app)
 @app.route('/')
